@@ -1,0 +1,23 @@
+<template>
+<h2><font color="green">Using JQuery with Aurelia for a GET Request - Example</font></h2>
+  <table border="1">
+    <thead>
+      <tr>        
+        <td><b>Id</b></td>
+        <td><b>Name</b></td>
+        <td><b>Gender</b></td>
+        <td><b>Birthdate</b></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr repeat.for="patient of PatientRecords">     
+        
+        <td>${patient.resource.id}</td>
+        <td>${patient.resource.name[0].given}</td>
+        <td>${patient.resource.gender}</td> 
+        <td>${patient.resource.birthDate}</td> 
+
+      </tr>
+    </tbody>
+  </table>
+</template>
